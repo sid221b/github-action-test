@@ -1,0 +1,15 @@
+{
+  "name": "github-action-test",
+  "version": "0.0.1",
+  "description": "jest test setup with action",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "sudhanshu221b@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
