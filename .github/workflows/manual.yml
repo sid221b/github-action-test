@@ -20,6 +20,6 @@ jobs:
       - name: Test log
         run: echo Test is running
       - name: Selected Package
-        run: echo Selected package is : ${{ inputs.tags }}
+        run: echo Selected package is -> ${{ inputs.package }}
 
 
