@@ -4,6 +4,7 @@ name: Unit Test Workflow
 
 on:
   pull_request:
+    branches: [main]
     types: [labeled]
 
 jobs:
