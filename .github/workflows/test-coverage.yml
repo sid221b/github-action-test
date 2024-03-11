@@ -24,15 +24,14 @@ jobs:
       - name: Run Tests with Coverage
         run: npm run test:coverage
 
-      - name: Deploy with gh-pages
-        run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Archive Coverage Reports
         uses: actions/upload-artifact@v2
         with:
           name: coverage
           path: coverage
+
+      - name: Deploy with gh-pages
+        run: |
+          git remote set-url origin https://git:${secrets.PAT}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+
