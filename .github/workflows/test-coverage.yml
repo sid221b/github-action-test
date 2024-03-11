@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Run Tests with Coverage
-        run: npm test -- --coverage
+        run: npm run test:coverage
 
       - name: Set Git user email
         run: git config user.email "you@example.com"
