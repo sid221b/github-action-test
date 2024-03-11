@@ -24,6 +24,9 @@ jobs:
       - name: Run Tests with Coverage
         run: npm test -- --coverage
 
+      - name: Deploy Coverage Report
+        run: npm run deploy
+
       - name: Archive Coverage Reports
         uses: actions/upload-artifact@v2
         with:

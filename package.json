@@ -5,11 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "deploy": "gh-pages -d coverage/lcov-report",
+    "postdeploy": "echo 'Coverage report deployed to GitHub Pages!'"
   },
   "author": "sudhanshu221b@gmail.com",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "jest": "^29.7.0"
   }
 }
