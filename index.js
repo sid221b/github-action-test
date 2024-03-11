@@ -3,7 +3,7 @@ const sum = (a, b) => {
 };
 
 const sumErr = (a,b) => {
-  return 1234
+  return 123
 }
 
 module.exports = {sum, sumErr}
