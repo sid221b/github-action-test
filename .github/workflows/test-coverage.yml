@@ -1,0 +1,31 @@
+name: Jest Coverage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  jest-coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests with Coverage
+        run: npm test -- --coverage
+
+      - name: Archive Coverage Reports
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage
