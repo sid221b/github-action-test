@@ -14,4 +14,4 @@ const divide = (a,b) => {
   return a/b
 }
 
-module.exports = {sum, sumErr}
+module.exports = {sum, sumErr, multiply, divide}
