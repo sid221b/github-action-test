@@ -3,7 +3,7 @@ const sum = (a, b) => {
 };
 
 const sumErr = (a,b) => {
-  return 123
+  return 12353
 }
 
 const multiply = (a,b) => {
@@ -14,4 +14,4 @@ const divide = (a,b) => {
   return a/b
 }
 
-module.exports = {sum, sumErr}
+module.exports = {sum, sumErr, multiply, divide}
