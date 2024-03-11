@@ -24,14 +24,12 @@ jobs:
       - name: Run Tests with Coverage
         run: npm run test:coverage
 
-      - name: Set Git user email
-        run: git config user.email "you@example.com"
-
-      - name: Set Git user name
-        run: git config user.name "Your Name"
-
-      - name: Deploy Coverage Report
-        run: npm run deploy
+      - name: Deploy with gh-pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Archive Coverage Reports
         uses: actions/upload-artifact@v2
