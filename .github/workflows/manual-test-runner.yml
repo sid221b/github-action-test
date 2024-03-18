@@ -1,15 +1,10 @@
-# this is a unit test workflow which runs npm run test script on pull request
-# and push to main branch
-name: Unit Test Workflow
+name: Run TEST CASES from a GITHUB Action using CTA
 
 on:
-  pull_request:
-    branches: [main]
-  push:
-    branches: [main]
+  workflow_dispatch
 
 jobs:
-  test:
+  run-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -17,9 +12,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: '14'
+      # ------------ Install dependencies----------------
       - name: Install dependencies
         run: npm ci
+      # ----------------Run test cases----------------
       - name: Run tests
-        run: npm run test
-
+        run: npm run test:unit

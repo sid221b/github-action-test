@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest",
+    "test:unit": "jest",
     "test:coverage": "jest --coverage",
     "deploy": "gh-pages -d coverage/lcov-report",
     "postdeploy": "echo 'Coverage report deployed to GitHub Pages!'"
