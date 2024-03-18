@@ -3,7 +3,7 @@ name: Run test case COVERAGE via PR label
 on:
   pull_request:
     branches:
-      - staging
+      - main
     types: [labeled]
     paths:
       - 'packages/**'
