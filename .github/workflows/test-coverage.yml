@@ -1,4 +1,4 @@
-name: Run test case COVERAGE from a GITHUB Action by adding a Label on the PR
+name: Run test case COVERAGE via PR label
 
 on:
   pull_request:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: '20'
 
       # ------------ Install dependencies----------------
       - name: Install dependencies
